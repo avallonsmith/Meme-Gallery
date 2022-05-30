@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  dev:
+    image: learningfuze/lfz-code:latest
+    environment:
+      PGHOST: postgres
+      PGUSER: dev
+      PGPASSWORD: dev
+      PGDATABASE: dev
+    volumes:
+      - home_dev:/home/dev
+      - vscode_extensions:/home/dev/.vscode-server/extensions
+
+volumes:
+
+  home_dev:
+  vscode_extensions:
